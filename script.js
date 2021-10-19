@@ -5,14 +5,14 @@ var fetchPage = function(pageid, data){
       <h3>Enter Name:</h3>
       <input type="text">
       <br>
-      <button>Submit</button>
+      <button id="submitButton">Submit</button>
 `;
     case 'page2':
       return `
       <h3>Enter Server:</h3>
       <input type="text">
       <br>
-      <button>Submit</button>
+      <button id="submitButton">Submit</button>
 `;    
     case 'page3':
       return `
@@ -44,7 +44,7 @@ var showNextPage = function(){
   display.innerHTML = template;
 }
 
-document.addEventListener('click', showNextPage);
+document.getElementById("submitButton").addEventListener('click', showNextPage);
 showNextPage();
 
 
