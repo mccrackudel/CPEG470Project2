@@ -1,0 +1,35 @@
+body{
+    text-align: center;
+    background-color: salmon;
+}
+#serverName{
+    font-size: 45;
+    font-weight: bold;
+}
+ul{
+  list-style:none;
+  max-height:200px;
+  margin:0;
+  overflow:auto;
+  padding:0;
+  text-indent:10px;
+}
+li{
+  line-height:25px;
+}
+li:nth-child(even){
+  background:#b5b0b9;
+}
+li:nth-child(odd){
+  background:#ccc;
+}
+
+textarea{
+  background-color: #b5b0b9;
+  margin-top: 10px;
+}
+button{
+  margin-top: 1%;
+  width: 15%
+    
+}
