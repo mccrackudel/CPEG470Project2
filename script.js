@@ -13,7 +13,6 @@ var fetchPage = function(pageid, data){
       <input type="text">
       <br>
       <button id="submitButton">Submit</button>
-      <button id ="backButton">Back</button>
 `;    
     case 'page3':
       return `
@@ -28,7 +27,6 @@ var fetchPage = function(pageid, data){
       <textarea id = "textBox"></textarea>
       <br>
       <button id = "submitButton" type = "submit" >Submit</button>
-      <button id ="backButton">Back</button>
   </body>
 `;     
     default:
@@ -45,15 +43,8 @@ var showNextPage = function(){
   var template = fetchPage(pages[currentPageIndex],{});
   display.innerHTML = template;
 }
-/*
-var goBack = function(){
-  currentPageIndex = (currentPageIndex - 1) % pages.length;
-  var template = fetchPage(pages[currentPageIndex],{});
-  display.innerHTML = template;
-}
-*/
-document.getElementById("backButton").addEventListener('click', showNextPage);
-document.getElementById("submitButton").addEventListener('click', showNextPage);
+
+document.addEventListener('click', showNextPage);
 showNextPage();
 
 
