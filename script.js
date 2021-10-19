@@ -2,7 +2,21 @@ var fetchPage = function(pageid, data){
   switch (pageid){
     case 'page1':
       return `
-<body>
+      <h3>Enter Name:</h3>
+      <input type="text">
+      <br>
+      <button>Submit</button>
+`;
+    case 'page2':
+      return `
+      <h3>Enter Server:</h3>
+      <input type="text">
+      <br>
+      <button>Submit</button>
+`;    
+    case 'page3':
+      return `
+      <body>
       <h1 id = "serverName">Server:</h1>
       <h3>Server Select:</h3>
       <div>messages/ firstServer/ secondServer/</div>
@@ -14,15 +28,6 @@ var fetchPage = function(pageid, data){
       <br>
       <button id = "submitButton" type = "submit" >Submit</button>
   </body>
-`;
-    case 'page2':
-      return `
-<p>This is page 2.  It is not here when you began.  Can we make it appear?
-`;    
-    case 'page3':
-      return `
-  <h1>This is page 3.</h1>
-  <p>Wanna fight about it?</p>
 `;     
     default:
       return "yoyoyoyo";
